@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "c51ee3d9-ad4e-43e4-89dd-86b2f516f248"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -31,7 +34,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "./node_modules/@nebular/theme/styles/prebuilt/dark.css"
             ],
             "scripts": []
           },
@@ -78,7 +82,11 @@
               "browserTarget": "login-angular:build:development"
             }
           },
-          "defaultConfiguration": "development"
+          "defaultConfiguration": "development",
+          "options": {
+            "sslKey": "./localhost.key",
+            "sslCert": "./localhost.crt"
+          }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
@@ -99,6 +107,7 @@
               "src/assets"
             ],
             "styles": [
+            "./node_modules/@nebular/theme/styles/prebuilt/dark.css", 
               "src/styles.scss"
             ],
             "scripts": []
